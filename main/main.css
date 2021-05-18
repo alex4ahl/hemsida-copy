@@ -35,10 +35,12 @@
 }
 
 body {
-  background-image: url(/pictures/kanyepower.jpg);
+  background-image: url(/pictures/juelzsantana.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
+  background-color: black;
+  display: flex;
 }
 
 .main {
