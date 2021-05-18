@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage of the Greatest</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="/pictures/GOAT.png" />
+    <style type="text/css">
+      .menutitle {
+        cursor: pointer;
+        margin-bottom: 5px;
+        background-color: cadetblue;
+        font-style: italic;
+        color: #000000;
+        width: 140px;
+        padding: 2px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #000000;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .submenu {
+        margin-bottom: 0.5em;
+      }
+    </style>
+    <script type="text/javascript">
+      var persistmenu = "yes";
+      var persisttype = "sitewide";
+
+      if (document.getElementById) {
+        document.write('<style type="text/css">\n');
+        document.write(".submenu{display: none;}\n");
+        document.write("</style>\n");
+      }
+
+      function SwitchMenu(obj) {
+        if (document.getElementById) {
+          var el = document.getElementById(obj);
+          var ar = document
+            .getElementById("masterdiv")
+            .getElementsByTagName("span");
+          if (el.style.display != "block") {
+            for (var i = 0; i < ar.length; i++) {
+              if (ar[i].className == "submenu") ar[i].style.display = "none";
+            }
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        }
+      }
+
+      function get_cookie(Name) {
+        var search = Name + "=";
+        var returnvalue = "";
+        if (document.cookie.length > 0) {
+          offset = document.cookie.indexOf(search);
+          if (offset != -1) {
+            offset += search.length;
+            end = document.cookie.indexOf(";", offset);
+            if (end == -1) end = document.cookie.length;
+            returnvalue = unescape(document.cookie.substring(offset, end));
+          }
+        }
+        return returnvalue;
+      }
+
+      function onloadfunction() {
+        if (persistmenu == "yes") {
+          var cookiename =
+            persisttype == "sitewide" ? "switchmenu" : window.location.pathname;
+          var cookievalue = get_cookie(cookiename);
+          if (cookievalue != "")
+            document.getElementById(cookievalue).style.display = "block";
+        }
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", onloadfunction, false);
+      else if (window.attachEvent) window.attachEvent("onload", onloadfunction);
+      else if (document.getElementById) window.onload = onloadfunction;
+
+      if (persistmenu == "yes" && document.getElementById)
+        window.onunload = savemenustate;
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div id="masterdiv">
+        <div class="dropdown" margin>
+          <button class="dropbtn">
+            <stronger>kanye beast of all music ever made</stronger>
+          </button>
+          <div class="dropdown-content">
+            <a
+              href="https://www.youtube.com/watch?v=L53gjP-TtGE"
+              target="_blank"
+              style="text-decoration: none"
+              >Power</a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=92FCRmggNqQ"
+              target="_blank"
+              style="text-decoration: none"
+              >Diamonds from Sierra Leone</a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=uvb-1wjAtk4&ab_channel=channelzerotv"
+              target="_blank"
+              style="text-decoration: none"
+              >Through the wire</a
+            >
+          </div>
+        </div>
+        <div class="heading">
+          <h1>Website of the Greatest!</h1>
+        </div>
+        <div class="listofg">
+          <ul>
+            <li>
+              <a href="/kanye/kanye.html" style="text-decoration: none"
+                >Kanye</a
+              >
+            </li>
+            <li>
+              <a href="/kendrick/kendrick.html" style="text-decoration: none"
+                >Kendrick</a
+              >
+            </li>
+            <li>
+              <a href="/polog/polog.html" style="text-decoration: none"
+                >Polo Capalot</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="boxonright">
+          <div class="menutitle" onclick="SwitchMenu('sub1')">Fax</div>
+          <span class="submenu" id="sub1">
+            - <a href="/kanye/Kanye.html">Kanye West</a><br />
+            - <a href="/polog/polog.html">Polo Capolot</a><br />
+            - <a href="/kendrick/kendrick.html">Kendrick</a><br />
+          </span>
+
+          <div class="menutitle" onclick="SwitchMenu('sub3')">About me</div>
+          <span class="submenu" id="sub3">
+            -
+            <a href="https://www.instagram.com/alexahll/?hl=sv" target="_blank"
+              >Insta</a
+            ><br />
+            - <a href="https://twitter.com/Alex_93y" target="_blank">twitter</a
+            ><br />
+            -
+            <a
+              href="mailto:alex4ahl@gmail.com"
+              subject="subject"
+              text
+              target="_blank"
+              >Mail</a
+            ><br />
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

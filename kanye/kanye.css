@@ -1,0 +1,14 @@
+.kanyemain {
+    width: 1000px;
+    height: 860px;
+    margin: 25px auto;
+    border: solid 4px black;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+body {
+background-image: url(/pictures/kanye1.jpg);
+background-size: auto;
+background-repeat: no-repeat;
+}
