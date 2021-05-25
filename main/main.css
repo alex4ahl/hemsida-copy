@@ -101,3 +101,8 @@ ul li:hover a {
   color: crimson;
   text-shadow: black;
 }
+@media only screen and (max-width: 300px) {
+  .heading {
+    display: none;
+  }
+}
