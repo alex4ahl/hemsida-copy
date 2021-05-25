@@ -8,9 +8,10 @@
 }
 body {
   background-image: url(/pictures/kanye1.jpg);
-  background-size: auto;
+  background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
+  background-color: orangered;
 }
 .firstkanye {
   width: 300px; 
